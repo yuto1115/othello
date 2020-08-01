@@ -129,6 +129,7 @@ func (b *Board) EnumAllChoices() *[]Position {
 
 func (b *Board) skip() {
 	b.player = b.player.nextPlayer()
+	b.turn++
 }
 
 func (b *Board) judge() {
