@@ -54,7 +54,7 @@ func main() {
 		pos := tools.Position{I: i - 1, J: j - 1}
 		err := board.Place(pos)
 		if err != nil {
-			fmt.Println("You can't place your piece there; please try again")
+			fmt.Println(err)
 			flag = false
 			continue
 		}

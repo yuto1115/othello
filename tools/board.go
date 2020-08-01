@@ -79,7 +79,7 @@ func (b *Board) count() (int, int) {
 
 func (b *Board) Place(pos Position) error {
 	if !b.isPlaceable(pos) {
-		return errors.New("invalid input")
+		return errors.New("You can't place your piece there; please try again")
 	}
 
 	get := b.goAround(pos)
