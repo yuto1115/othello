@@ -25,7 +25,7 @@ func main() {
 			for _, pos := range *choice {
 				fmt.Printf("%d %d\n", pos.I+1, pos.J+1)
 			}
-			goto LABELenum
+			goto LABEL
 		}
 
 		if len(s) != 2 {
