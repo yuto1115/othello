@@ -4,9 +4,9 @@ import "fmt"
 
 type Piece int
 
-func (p Piece) display() {
+func (p *Piece) display() {
 	var s string
-	switch p {
+	switch *p {
 	case Black:
 		s = "●"
 	case White:
@@ -15,4 +15,12 @@ func (p Piece) display() {
 		s = " "
 	}
 	fmt.Printf("%s", s)
+}
+
+func (p *Piece) toPlayer() Player {
+	if *p == Black {
+		return Black
+	} else {
+		return White
+	}
 }

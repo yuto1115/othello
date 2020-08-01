@@ -2,18 +2,34 @@ package tools
 
 type Player int
 
-func (p Player) nextPlayer() Player {
-	if p == 0 {
-		return 1
+func (p *Player) nextPlayer() Player {
+	if *p == Black {
+		return White
 	} else {
-		return 0
+		return Black
+	}
+}
+
+func (p *Player) mark() string {
+	if *p == Black {
+		return "●"
+	} else {
+		return "○"
 	}
 }
 
 func (p Player) string() string {
 	if p == Black {
-		return "●"
+		return "Black"
 	} else {
-		return "○"
+		return "White"
+	}
+}
+
+func (p Player) toPiece() Piece {
+	if p == Black {
+		return Black
+	} else {
+		return White
 	}
 }
