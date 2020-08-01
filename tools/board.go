@@ -41,16 +41,7 @@ func NewBoard() *Board {
 }
 
 func (b *Board) Display() {
-	fmt.Println("| |1|2|3|4|5|6|7|8|")
-
-	for i := 0; i < 8; i++ {
-		fmt.Printf("|%d|", i+1)
-		for j := 0; j < 8; j++ {
-			b.board[i][j].display()
-			fmt.Printf("|")
-		}
-		fmt.Printf("\n")
-	}
+	b.displayOnlyBoard()
 
 	fmt.Printf("next player is %s\n", b.player.mark())
 	bl, wh := b.count()
