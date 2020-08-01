@@ -9,11 +9,13 @@ import (
 
 func main() {
 	board := tools.NewBoard()
+	flag := true
 	for {
-		board.Display()
-		fmt.Println("Enter two numbers '[row number][column number]'")
+		if flag {
+			board.Display()
+			fmt.Println("Enter two numbers '[row number][column number]'")
+		}
 
-	LABEL:
 		var s string
 		fmt.Scanf("%s", &s)
 
@@ -25,36 +27,38 @@ func main() {
 			for _, pos := range *choice {
 				fmt.Printf("%d %d\n", pos.I+1, pos.J+1)
 			}
-			goto LABEL
+			flag = false
+			continue
 		}
 
 		if len(s) != 2 {
 			fmt.Println("invalid input; please try again")
-			goto LABEL
+			flag = false
+			continue
 		}
 
 		i, e1 := strconv.Atoi(s[0:1])
 		if e1 != nil {
 			fmt.Println("invalid input; please try again")
-			goto LABEL
+			flag = false
+			continue
 		}
 
 		j, e2 := strconv.Atoi(s[1:2])
 		if e2 != nil {
 			fmt.Println("invalid input; please try again")
-			goto LABEL
+			flag = false
+			continue
 		}
 
 		pos := tools.Position{I: i - 1, J: j - 1}
-		if pos.OutOfRange() {
-			fmt.Println("invalid input; please try again")
-			goto LABEL
-		}
-
 		err := board.Place(pos)
 		if err != nil {
 			fmt.Println("You can't place your piece there; please try again")
-			goto LABEL
+			flag = false
+			continue
 		}
+
+		flag = true
 	}
 }
