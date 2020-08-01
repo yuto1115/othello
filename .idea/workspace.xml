@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="added files">
+    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="changed README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/board.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/board.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/piece.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/piece.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/player.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/player.go" afterDir="false" />
@@ -106,7 +106,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialized" />
     <MESSAGE value="added files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added files" />
+    <MESSAGE value="changed README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="89" key="#GOPATH" timestamp="1596270532101">
@@ -117,22 +118,22 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="369" y="85" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1596275420204" />
-    <state width="678" height="512" key="GridCell.Tab.0.bottom" timestamp="1596283648117">
+    <state width="1398" height="636" key="GridCell.Tab.0.bottom" timestamp="1596294328246">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="678" height="512" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596283648117" />
-    <state width="678" height="512" key="GridCell.Tab.0.center" timestamp="1596283648115">
+    <state width="1398" height="636" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596294328246" />
+    <state width="1398" height="636" key="GridCell.Tab.0.center" timestamp="1596294328245">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="678" height="512" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596283648115" />
-    <state width="678" height="512" key="GridCell.Tab.0.left" timestamp="1596283648115">
+    <state width="1398" height="636" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596294328245" />
+    <state width="1398" height="636" key="GridCell.Tab.0.left" timestamp="1596294328245">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="678" height="512" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596283648115" />
-    <state width="678" height="512" key="GridCell.Tab.0.right" timestamp="1596283648116">
+    <state width="1398" height="636" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596294328245" />
+    <state width="1398" height="636" key="GridCell.Tab.0.right" timestamp="1596294328246">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="678" height="512" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596283648116" />
+    <state width="1398" height="636" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596294328246" />
     <state x="443" y="62" key="SettingsEditor" timestamp="1596273591691">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
