@@ -121,7 +121,7 @@ func (b *Board) isPlaceable(pos Position) bool {
 	return true
 }
 
-func (b *Board) enumAllChoices() *[]Position {
+func (b *Board) EnumAllChoices() *[]Position {
 	res := make([]Position, 0, 64)
 
 	for i := 0; i < 8; i++ {
@@ -141,11 +141,11 @@ func (b *Board) skip() {
 }
 
 func (b *Board) judge() {
-	choice := b.enumAllChoices()
+	choice := b.EnumAllChoices()
 
 	if len(*choice) == 0 {
 		b.skip()
-		choice = b.enumAllChoices()
+		choice = b.EnumAllChoices()
 
 		if len(*choice) == 0 {
 			bl, wh := b.count()

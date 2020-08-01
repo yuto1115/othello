@@ -20,6 +20,14 @@ func main() {
 		if s == "exit" {
 			os.Exit(0)
 		}
+		if s == "enum" {
+			choice := board.EnumAllChoices()
+			for _, pos := range *choice {
+				fmt.Printf("%d %d\n", pos.I+1, pos.J+1)
+			}
+			goto LABELenum
+		}
+
 		if len(s) != 2 {
 			fmt.Println("invalid input; please try again")
 			goto LABEL
