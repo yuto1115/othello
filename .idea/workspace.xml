@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="updated board.go">
+    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="updated whole project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/board.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/board.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/player.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/player.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,8 @@
     <MESSAGE value="eliminated GOTO sentences" />
     <MESSAGE value="changed error system" />
     <MESSAGE value="updated board.go" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated board.go" />
+    <MESSAGE value="updated whole project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated whole project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="89" key="#GOPATH" timestamp="1596270532101">
@@ -144,10 +143,10 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="443" y="62" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1596273591691" />
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596296318726">
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596438539337">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596296318726" />
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596438539337" />
     <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596294981014">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
