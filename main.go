@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/yuto1115/othello/simulate"
+
+	"othello/makeCpu"
+	"othello/simulate"
 )
 
 func main() {
-	fmt.Println("choose a mode\ntwo person -> 'vs' one people -> 'cpu'")
+	fmt.Println("choose a mode\ntwo people -> 'vs' one person -> 'cpu' make cpu -> 'make'")
 	var s string
 	for {
-		_, e := fmt.Scanf("%s", &s)
-		if e != nil {
+		_, err := fmt.Scanf("%s", &s)
+		if err != nil {
 			fmt.Println("invalid input; please try again")
 			continue
 		}
@@ -20,6 +22,9 @@ func main() {
 			break
 		} else if s == "cpu" {
 			simulate.Simulate(true)
+			break
+		} else if s == "make" {
+			makeCpu.MakeCpu()
 			break
 		} else {
 			fmt.Println("invalid input; please try again")

@@ -2,23 +2,23 @@ package tools
 
 type Player int
 
-func (p *Player) NextPlayer() Player {
-	if *p == Black {
+func (p Player) NextPlayer() Player {
+	if p == Black {
 		return White
 	} else {
 		return Black
 	}
 }
 
-func (p *Player) mark() string {
-	if *p == Black {
+func (p Player) toMark() string {
+	if p == Black {
 		return "●"
 	} else {
 		return "○"
 	}
 }
 
-func (p Player) string() string {
+func (p Player) ToString() string {
 	if p == Black {
 		return "Black"
 	} else {

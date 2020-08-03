@@ -16,12 +16,28 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="updated whole project">
+    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="updated and added some files">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/makeCpu/makeCpu.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/othello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulate/makeCpuSimulate.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpu/eval.go" beforeDir="false" afterPath="$PROJECT_DIR$/cpu/eval.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpu/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/cpu/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulate/simulate.go" beforeDir="false" afterPath="$PROJECT_DIR$/simulate/simulate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/board.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/board.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/piece.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/piece.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/player.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/player.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +81,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Go" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -94,7 +110,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -112,7 +140,10 @@
     <MESSAGE value="changed error system" />
     <MESSAGE value="updated board.go" />
     <MESSAGE value="updated whole project" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated whole project" />
+    <MESSAGE value="updated README.md" />
+    <MESSAGE value="updated some files" />
+    <MESSAGE value="updated and added some files" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated and added some files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="89" key="#GOPATH" timestamp="1596270532101">
@@ -123,34 +154,42 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="369" y="85" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1596275420204" />
-    <state width="1398" height="567" key="GridCell.Tab.0.bottom" timestamp="1596438446261">
+    <state x="455" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596462146363">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="567" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
-    <state width="1398" height="567" key="GridCell.Tab.0.center" timestamp="1596438446261">
+    <state x="455" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.801@0.23.1440.801" timestamp="1596462146363" />
+    <state width="1392" height="562" key="GridCell.Tab.0.bottom" timestamp="1596465057486">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="567" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
-    <state width="1398" height="567" key="GridCell.Tab.0.left" timestamp="1596438446260">
+    <state width="1392" height="562" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596465057486" />
+    <state width="1392" height="562" key="GridCell.Tab.0.center" timestamp="1596465057484">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="567" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596438446260" />
-    <state width="1398" height="567" key="GridCell.Tab.0.right" timestamp="1596438446261">
+    <state width="1392" height="562" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596465057484" />
+    <state width="1392" height="562" key="GridCell.Tab.0.left" timestamp="1596465057483">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="567" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
-    <state x="443" y="62" key="SettingsEditor" timestamp="1596273591691">
+    <state width="1392" height="562" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596465057483" />
+    <state width="1392" height="562" key="GridCell.Tab.0.right" timestamp="1596465057485">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="443" y="62" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1596273591691" />
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596438539337">
+    <state width="1392" height="562" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596465057485" />
+    <state x="368" y="56" key="SettingsEditor" timestamp="1596459723618">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596438539337" />
-    <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596294981014">
+    <state x="368" y="56" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1596459723618" />
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596462925583">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.801@0.23.1440.801" timestamp="1596294981014" />
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596462925583" />
+    <state x="488" y="266" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1596464365102">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="488" y="266" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.23.1440.801@0.23.1440.801" timestamp="1596464365102" />
+    <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596462872051">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.801@0.23.1440.801" timestamp="1596462872051" />
     <state x="385" y="148" width="670" height="676" key="search.everywhere.popup" timestamp="1596435388574">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
