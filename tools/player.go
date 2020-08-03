@@ -2,7 +2,7 @@ package tools
 
 type Player int
 
-func (p *Player) nextPlayer() Player {
+func (p *Player) NextPlayer() Player {
 	if *p == Black {
 		return White
 	} else {
@@ -26,7 +26,7 @@ func (p Player) string() string {
 	}
 }
 
-func (p Player) toPiece() Piece {
+func (p Player) ToPiece() Piece {
 	if p == Black {
 		return Black
 	} else {

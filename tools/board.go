@@ -21,6 +21,11 @@ type Board struct {
 	turn   int
 }
 
+type History struct {
+	pos   Position
+	piece Piece
+}
+
 func NewBoard() *Board {
 	var b Board
 
@@ -38,6 +43,26 @@ func NewBoard() *Board {
 	b.turn = 1
 
 	return &b
+}
+
+func (b *Board) GetPlayer() Player {
+	return b.player
+}
+
+func (b *Board) GetBoard() [8][8]Piece {
+	return b.board
+}
+
+func (b *Board) ChangePlayer() {
+	b.player = b.player.NextPlayer()
+}
+
+func (b *Board) Reverse(histories *[]History) {
+	for _, hist := range *histories {
+		//fmt.Printf("%d %dを元に戻したよ\n",hist.pos.I+1,hist.pos.J+1)
+		b.board[hist.pos.I][hist.pos.J] = hist.piece
+		//b.Display()
+	}
 }
 
 func (b *Board) Display() {
@@ -77,20 +102,23 @@ func (b *Board) count() (int, int) {
 	return bl, wh
 }
 
-func (b *Board) Place(pos Position) error {
+func (b *Board) Place(pos Position, histories *[]History) error {
 	if !b.isPlaceable(pos) {
 		return errors.New("You can't place your piece there; please try again")
 	}
 
 	get := b.goAround(pos)
 
-	b.board[pos.I][pos.J] = b.player.toPiece()
+	*histories = append(*histories, History{pos: pos, piece: b.board[pos.I][pos.J]})
+	b.board[pos.I][pos.J] = b.player.ToPiece()
+	//fmt.Printf("%d %dに新しく置くよ\n",pos.I+1,pos.J+1)
+	//b.Display()
 	for _, newPos := range *get {
-		b.board[newPos.I][newPos.J] = b.player.toPiece()
+		//fmt.Printf("%d %dをひっくり返したよ\n",newPos.I+1,newPos.J+1)
+		*histories = append(*histories, History{pos: newPos, piece: b.board[newPos.I][newPos.J]})
+		b.board[newPos.I][newPos.J] = b.player.ToPiece()
+		//b.Display()
 	}
-	b.player = b.player.nextPlayer()
-	b.turn++
-	b.judge()
 
 	return nil
 }
@@ -127,34 +155,64 @@ func (b *Board) EnumAllChoices() *[]Position {
 	return &res
 }
 
-func (b *Board) skip() {
-	b.player = b.player.nextPlayer()
+func (b *Board) Skip() {
+	b.player = b.player.NextPlayer()
 	b.turn++
 }
 
-func (b *Board) judge() {
+func (b *Board) ReverseSkip() {
+	b.player = b.player.NextPlayer()
+	b.turn--
+}
+
+func (b Board) Judge() string {
 	choice := b.EnumAllChoices()
 
 	if len(*choice) == 0 {
-		b.skip()
+		b.Skip()
 		choice = b.EnumAllChoices()
 
 		if len(*choice) == 0 {
 			bl, wh := b.count()
 
-			b.displayOnlyBoard()
 			if bl > wh {
-				fmt.Printf("Black has won by %d - %d", bl, wh)
+				return "Black"
 			} else if bl < wh {
-				fmt.Printf("White has won by %d - %d", bl, wh)
+				return "White"
 			} else {
-				fmt.Printf("Draw  %d - %d", bl, wh)
+				return "Draw"
 			}
-
-			os.Exit(0)
 		} else {
-			fmt.Printf("%s passed; It's %s turn again\n", b.player.nextPlayer().string(), b.player.string())
+			return "Skip"
 		}
+	}
+	return ""
+}
+
+func (b *Board) Proceed() {
+	b.player = b.player.NextPlayer()
+	b.turn++
+
+	s := b.Judge()
+	if s == "" {
+		return
+	}
+
+	bl, wh := b.count()
+	b.displayOnlyBoard()
+
+	if s == "Black" {
+		fmt.Printf("Black has won by %d - %d", bl, wh)
+		os.Exit(0)
+	} else if s == "White" {
+		fmt.Printf("White has won by %d - %d", bl, wh)
+		os.Exit(0)
+	} else if s == "Draw" {
+		fmt.Printf("Draw  %d - %d", bl, wh)
+		os.Exit(0)
+	} else {
+		fmt.Printf("%s passed; It's %s turn again\n", b.player.NextPlayer().string(), b.player.string())
+		b.Skip()
 	}
 }
 
@@ -189,9 +247,9 @@ func (b *Board) search(pos Position, f func(Position) Position) *[]Position {
 		switch b.board[nowPos.I][nowPos.J] {
 		case Empty:
 			return &[]Position{}
-		case b.player.toPiece():
+		case b.player.ToPiece():
 			return &res
-		case b.player.nextPlayer().toPiece():
+		case b.player.NextPlayer().ToPiece():
 			res = append(res, nowPos)
 		}
 	}

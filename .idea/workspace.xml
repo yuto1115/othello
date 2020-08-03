@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="changed error system" />
+    <list default="true" id="5d61b887-94f2-47a2-95d9-80adedcd242a" name="Default Changelist" comment="updated board.go">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/board.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/board.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/player.go" beforeDir="false" afterPath="$PROJECT_DIR$/tools/player.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +71,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/simulate" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -105,9 +111,9 @@
     <MESSAGE value="updated tools" />
     <MESSAGE value="implemented enum as input" />
     <MESSAGE value="eliminated GOTO sentences" />
-    <MESSAGE value="updated board.go" />
     <MESSAGE value="changed error system" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed error system" />
+    <MESSAGE value="updated board.go" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated board.go" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="89" key="#GOPATH" timestamp="1596270532101">
@@ -118,33 +124,37 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="369" y="85" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.801@0.23.1440.801" timestamp="1596275420204" />
-    <state width="1398" height="636" key="GridCell.Tab.0.bottom" timestamp="1596295565929">
+    <state width="1398" height="567" key="GridCell.Tab.0.bottom" timestamp="1596438446261">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="636" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596295565929" />
-    <state width="1398" height="636" key="GridCell.Tab.0.center" timestamp="1596295565928">
+    <state width="1398" height="567" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
+    <state width="1398" height="567" key="GridCell.Tab.0.center" timestamp="1596438446261">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="636" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596295565928" />
-    <state width="1398" height="636" key="GridCell.Tab.0.left" timestamp="1596295565927">
+    <state width="1398" height="567" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
+    <state width="1398" height="567" key="GridCell.Tab.0.left" timestamp="1596438446260">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="636" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596295565927" />
-    <state width="1398" height="636" key="GridCell.Tab.0.right" timestamp="1596295565929">
+    <state width="1398" height="567" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1596438446260" />
+    <state width="1398" height="567" key="GridCell.Tab.0.right" timestamp="1596438446261">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state width="1398" height="636" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596295565929" />
+    <state width="1398" height="567" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1596438446261" />
     <state x="443" y="62" key="SettingsEditor" timestamp="1596273591691">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="443" y="62" key="SettingsEditor/0.23.1440.801@0.23.1440.801" timestamp="1596273591691" />
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596296006132">
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2" timestamp="1596296318726">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
-    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596296006132" />
+    <state x="640" y="159" key="Vcs.Push.Dialog.v2/0.23.1440.801@0.23.1440.801" timestamp="1596296318726" />
     <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596294981014">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state x="516" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.801@0.23.1440.801" timestamp="1596294981014" />
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup" timestamp="1596435388574">
+      <screen x="0" y="23" width="1440" height="801" />
+    </state>
+    <state x="385" y="148" width="670" height="676" key="search.everywhere.popup/0.23.1440.801@0.23.1440.801" timestamp="1596435388574" />
   </component>
 </project>
