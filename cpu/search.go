@@ -8,11 +8,8 @@ import (
 	"othello/tools"
 )
 
-func lastEval(b *tools.Board, turn int, firstPlayer tools.Player, EVAL []int, nowMax int, existMax bool) int {
-	if turn == 6 {
-		if b.Player != firstPlayer {
-			log.Fatal("turn calc is wrong!!!!!")
-		}
+func lastEval(b *tools.Board, turn int, EVAL []int, nowMax int, existMax bool) int {
+	if turn == 2 {
 		return Eval(b, EVAL)
 	}
 
@@ -22,7 +19,7 @@ func lastEval(b *tools.Board, turn int, firstPlayer tools.Player, EVAL []int, no
 
 	if len(choice) == 0 {
 		b.ChangePlayer()
-		res := -lastEval(b, turn+1, firstPlayer, EVAL, 0, false)
+		res := -lastEval(b, turn+1, EVAL, 0, false)
 		b.ChangePlayer()
 		return res
 	}
@@ -40,9 +37,9 @@ func lastEval(b *tools.Board, turn int, firstPlayer tools.Player, EVAL []int, no
 
 		var res int
 		if flag {
-			res = -lastEval(b, turn+1, firstPlayer, EVAL, mx, true)
+			res = -lastEval(b, turn+1, EVAL, mx, true)
 		} else {
-			res = -lastEval(b, turn+1, firstPlayer, EVAL, 0, false)
+			res = -lastEval(b, turn+1, EVAL, 0, false)
 		}
 
 		b.ChangePlayer()
@@ -87,7 +84,8 @@ func SearchNextChoice(b *tools.Board, EVAL []int) (int, int) {
 
 		go func(nb tools.Board) {
 			nb.ChangePlayer()
-			res := -lastEval(&nb, 1, nb.Player.NextPlayer(), EVAL, 0, false)
+			//res := -lastEval(&nb, 1, EVAL, 0, false)
+			res := -Eval(&nb, EVAL)
 			if flag {
 				if res > mx {
 					mx = res

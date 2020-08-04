@@ -1,7 +1,6 @@
 package simulate
 
 import (
-	"fmt"
 	"log"
 
 	"othello/cpu"
@@ -11,7 +10,7 @@ import (
 // 0 -> Black Wins
 // 1 -> Draw
 // 2 -> White Wins
-func makeCpuSimulate(BlackEVAL []int, WhiteEVAL []int) int {
+func MakeCpuSimulate(BlackEVAL []int, WhiteEVAL []int) int {
 	if len(BlackEVAL) != cpu.Pow3[16] {
 		log.Fatal("Size of BlackEval is wrong")
 	}
@@ -19,14 +18,8 @@ func makeCpuSimulate(BlackEVAL []int, WhiteEVAL []int) int {
 		log.Fatal("Size of WhiteEval is wrong")
 	}
 	board := tools.NewBoard()
-	flag := true
 
 	for {
-		if flag {
-			board.Display()
-			fmt.Println("Enter two numbers '[row number][column number]'")
-		}
-
 		var i, j int
 
 		if board.Player == tools.Black {
@@ -39,12 +32,19 @@ func makeCpuSimulate(BlackEVAL []int, WhiteEVAL []int) int {
 		var histories = make([]tools.History, 0, 32)
 		err := board.Place(pos, &histories)
 		if err != nil {
-			fmt.Println(err)
-			flag = false
-			continue
+			log.Fatal(err)
 		}
-		board.Proceed()
 
-		flag = true
+		board.Skip()
+		s := board.Judge()
+		if s == "Black" {
+			return 0
+		} else if s == "White" {
+			return 2
+		} else if s == "Draw" {
+			return 1
+		} else if s == "Skip" {
+			board.Skip()
+		}
 	}
 }
